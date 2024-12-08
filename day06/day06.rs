@@ -1,4 +1,5 @@
 mod part1;
+mod part2;
 
 use std::io::{self, BufRead};
 use std::fs::File;
@@ -34,10 +35,16 @@ mod tests {
         let char_matrix = get_input("./test.txt");
         assert_eq!(part1::part1(char_matrix), 41);
     }
+    #[test]
+    fn test_part02() {
+        let char_matrix = get_input("./test.txt");
+        assert_eq!(part2::part2(char_matrix), 6);
+    }
 }
 
 fn main() {
     let char_matrix = get_input("./input.txt");
 
-    println!("RESULT 1: {}", part1::part1(char_matrix));
+    println!("RESULT 1: {}", part1::part1(char_matrix.clone()));
+    println!("RESULT 2: {}", part2::part2(char_matrix.clone()));
 }
