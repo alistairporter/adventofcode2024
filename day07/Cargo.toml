@@ -1,0 +1,11 @@
+[package]
+name = "day07"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+itertools = "0.13.0"
+
+[[bin]]
+name = "day07"
+path = "day07.rs"
